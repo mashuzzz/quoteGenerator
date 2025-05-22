@@ -1,0 +1,81 @@
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+#generateButton, #copyButton, #favoriteButton, #clearHistoryButton {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#generateButton:hover, #copyButton:hover, #favoriteButton:hover, #clearHistoryButton:hover {
+    background-color: #2980b9;
+}
+#quoteOutput {
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-left: 4px solid #3498db;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+#quoteOutput.show {
+    opacity: 1;
+}
+#copyButton, #favoriteButton {
+    display: none;
+}
+#copyButton.show, #favoriteButton.show {
+    display: block;
+}
+#favoritesList, #historyList {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+}
+#favoritesList p, #historyList p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.removeFavoriteButton {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.removeFavoriteButton:hover {
+    background-color: #c0392b;
+}
+@media (max-width: 600px) {
+    #generateButton, #copyButton, #favoriteButton, #clearHistoryButton {
+        width: 100%;
+        max-width: 300px;
+    }
+    #quoteOutput, #favoritesList, #historyList, .favorite-item {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .removeFavoriteButton {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
